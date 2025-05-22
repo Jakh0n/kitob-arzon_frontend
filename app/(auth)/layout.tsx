@@ -1,11 +1,14 @@
 import Navbar from '@/components/shared/navbar'
+import { authOptions } from '@/lib/auth-options'
 import { ChildProps } from '@/types'
-import React from 'react'
+import { getServerSession } from 'next-auth'
 
-function Layout({ children }: ChildProps) {
+async function Layout({ children }: ChildProps) {
+	const session = await getServerSession(authOptions)
+
 	return (
 		<div>
-			<Navbar />
+			<Navbar session={session} />
 			<main className='flex justify-center  mt-44'>{children}</main>
 		</div>
 	)
