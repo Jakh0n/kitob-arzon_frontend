@@ -49,7 +49,7 @@ const Page = () => {
 			return onError(res.data.failure)
 		}
 		if (res.data.status === 200) {
-			toast({ description: 'Hisob o&apos;chirildi' })
+			toast({ description: "Hisob o'chirildi" })
 			setIsLoading(false)
 			signOut({ callbackUrl: '/sign-up' })
 		}
@@ -65,7 +65,7 @@ const Page = () => {
 			return onError(res.data.failure)
 		}
 		if (res.data.status === 200) {
-			toast({ description: 'Parol muvaffaqiyatli o&apos;zgartirildi' })
+			toast({ description: "Parol muvaffaqiyatli o'zgartirildi" })
 			setIsLoading(false)
 			form.reset()
 		}
@@ -76,24 +76,23 @@ const Page = () => {
 			<h1 className='text-xl font-bold'>Xavfli zona</h1>
 			<Separator className='my-3' />
 			<div className='p-4 bg-secondary flex flex-col space-y-0'>
-				<div className='text-lg font-bold'>Hisobni o&apos;chirish</div>
+				<div className='text-lg font-bold'>Hisobni o'chirish</div>
 				<p className='text-sm text-muted-foreground'>
-					Hisobingizni o&apos;chirish barcha ma&apos;lumotlaringizni
-					serverlarimizdan o&apos;chiradi. Bu amalni qaytarib bo&apos;lmaydi.
+					Hisobingizni o'chirish barcha ma'lumotlaringizni serverlarimizdan
+					o'chiradi. Bu amalni qaytarib bo'lmaydi.
 				</p>
 				<AlertDialog>
 					<AlertDialogTrigger asChild>
 						<Button className='w-fit' size={'sm'} variant={'destructive'}>
-							Hisobni o&apos;chirish
+							Hisobni o'chirish
 						</Button>
 					</AlertDialogTrigger>
 					<AlertDialogContent>
 						<AlertDialogHeader>
 							<AlertDialogTitle>Ishonchingiz komilmi?</AlertDialogTitle>
 							<AlertDialogDescription>
-								Bu amalni qaytarib bo&apos;lmaydi. Bu hisobingizni va barcha
-								ma&apos;lumotlaringizni serverlarimizdan o&apos;chirib
-								tashlaydi.
+								Bu amalni qaytarib bo'lmaydi. Bu hisobingizni va barcha
+								ma'lumotlaringizni serverlarimizdan o'chirib tashlaydi.
 							</AlertDialogDescription>
 						</AlertDialogHeader>
 						<AlertDialogFooter>
@@ -167,7 +166,7 @@ const Page = () => {
 								)}
 							/>
 							<Button type='submit' disabled={isLoading}>
-								O&apos;zgartirish
+								O'zgartirish
 							</Button>
 						</form>
 					</Form>
