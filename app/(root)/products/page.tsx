@@ -29,9 +29,7 @@ const Page = async ({ searchParams }: Props) => {
 				<h1 className='font-bold mr-4'>Kitoblar</h1>
 				<Filter />
 			</div>
-
 			<Separator className='my-4' />
-
 			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4'>
 				{products &&
 					products.map(product => (
